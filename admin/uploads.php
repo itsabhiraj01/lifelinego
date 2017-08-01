@@ -1,6 +1,9 @@
  <?php
 
+include("../config/connection.php");
+
  $ds = DIRECTORY_SEPARATOR; //1
+ $id = $_GET['id'];
 
  $storeFolder = '../uploads'; //2
 
@@ -8,6 +11,9 @@ $ext = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
 $newname = time();
 $random = rand(100,999);
 $name = $newname.$random.'.'.$ext;
+
+$q = "UPDATE users SET avatar = '$name' WHERE id = $id";
+$r = mysqli_query($dbc, $q);
 
  if(!empty($_FILES)) {
 
@@ -21,4 +27,4 @@ $name = $newname.$random.'.'.$ext;
 
  }
 
- ?>
+ ?> 

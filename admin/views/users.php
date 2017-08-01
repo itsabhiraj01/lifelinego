@@ -107,7 +107,7 @@
 
 	    </form>
          
-         <form action="uploads.php" class="dropzone" id="avatar-dropzone">
+         <form action="uploads.php?id=<?php echo $opened['id']; ?>" class="dropzone" id="avatar-dropzone">
          	
          	<input type="file" name="file">
 
