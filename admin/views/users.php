@@ -7,6 +7,12 @@
 	    	Dropzone.autoDiscover = false;
 
 	    	var myDropzone =new Dropzone("#avatar-dropzone");
+
+	    	myDropzone.on("success", function(file) {
+
+	    		$("#avatar").load("ajax/avatar.php?id=<?php echo $opened['id']; ?>");
+
+	    	});
 	    });
 
 	</script>
@@ -55,7 +61,9 @@
 	        
             <?php if($opened['avatar'] != '') { ?>
 
+            	<div id="avatar">
                 <img src="../uploads/<?php echo $opened['avatar']; ?>">
+                </div>
 
             <?php } ?>
 
