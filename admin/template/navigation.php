@@ -8,6 +8,7 @@
 			<li><a href="?page=dashboard">Dashboard</a></li>
 			<li><a href="?page=pages">Pages</a></li>
 			<li><a href="?page=users">users</a></li>
+			<li><a href="?page=navigation">Navigation</a></li>
 			<li><a href="?page=settings">Settings</a></li>
 			
 		</ul>

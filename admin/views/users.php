@@ -58,14 +58,18 @@
 	    <?php if (isset($message)) { echo $message; }  ?>
 
 	    <form role="form" method="POST" action="index.php?page=users&id=<?php echo $opened['id']; ?>">
-	        
-            <?php if($opened['avatar'] != '') { ?>
 
-            	<div id="avatar">
-                <img src="../uploads/<?php echo $opened['avatar']; ?>">
-                </div>
+	         <div id="avatar"> 
 
-            <?php } ?>
+                <?php if($opened['avatar'] != '') { ?>
+
+            	<div class="avatar-container" style="background-image: url('../uploads/<?php echo $opened['avatar']; ?>')"></div>
+                
+                <?php } ?>
+
+            </div>
+
+            
 
 	        <div class="form-group">
 	            

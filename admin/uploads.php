@@ -12,6 +12,10 @@ $newname = time();
 $random = rand(100,999);
 $name = $newname.$random.'.'.$ext;
 
+$q = "SELECT avatar FROM users WHERE id = $id";
+$r = mysqli_query($dbc, $q);
+$old = mysqli_fetch_assoc($r); 
+
 $q = "UPDATE users SET avatar = '$name' WHERE id = $id";
 $r = mysqli_query($dbc, $q);
 
@@ -25,6 +29,16 @@ $r = mysqli_query($dbc, $q);
 
  	move_uploaded_file($tempFile,$targetFile); //6
 
+ 	$deleteFile = $targetPath.$old['avatar'];
+
+    
+    if($old['avatar'] != '') {
+        if (!is_dir($deleteFile)) {
+
+        	unlink($deleteFile);
+        }
+    }
+    
  }
 
  ?> 

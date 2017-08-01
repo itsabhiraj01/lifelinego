@@ -1,4 +1,4 @@
-<h1>Site Settings</h1>
+<h1>Navigation</h1>
 
 <div class="row">
 	<div class="col-md-12">
@@ -7,32 +7,46 @@
 
 	    <?php 
 	    
-	        $q = "SELECT * FROM settings ORDER BY id ASC";
+	        $q = "SELECT * FROM navigation ORDER BY position ASC";
 	        $r = mysqli_query($dbc, $q);
 
 	        while($opened = mysqli_fetch_assoc($r)) {  ?>
 	            
-		    <form class="form-inline" role="form" method="POST" action="index.php?page=settings&id=<?php echo $opened['id']; ?>">
+		    <form class="form-inline" role="form" method="POST" action="index.php?page=navigation&id=<?php echo $opened['id']; ?>">
 		        
 		        <div class="form-group">
 		            
 		            <!-- class="sr-only" -->
-		            <label  for="id">ID</label>
+		            <label for="id">ID</label>
 		            <input class="form-control" type="text" name="id" id="id" value="<?php echo $opened['id']; ?>" placeholder="Id-name" autocomplete="off">
 
 		        </div>
 
 		         <div class="form-group">
 		            
-		            <label for="label">Label</label>
+		            <label cfor="label">Label</label>
 		            <input class="form-control" type="text" name="label" id="label" value="<?php echo $opened['label']; ?>" placeholder="Label" autocomplete="off">
 
 		        </div>
 
 		         <div class="form-group">
 		            
-		            <label for="value">Value</label>
-		            <input class="form-control" type="text" name="value" id="value" value="<?php echo $opened['value']; ?>" placeholder="Value" autocomplete="off">
+		            <label for="url">Url</label>
+		            <input class="form-control" type="text" name="url" id="url" value="<?php echo $opened['url']; ?>" placeholder="url" autocomplete="off">
+
+		        </div>
+
+		        <div class="form-group">
+		            
+		            <label for="position">Position</label>
+		            <input class="form-control" type="text" name="position" id="position" value="<?php echo $opened['position']; ?>" placeholder="" autocomplete="off">
+
+		        </div>
+
+		        <div class="form-group">
+		            
+		            <label for="status">Status</label>
+		            <input class="form-control" type="text" name="status" id="status" value="<?php echo $opened['status']; ?>" placeholder="" autocomplete="off">
 
 		        </div>
 

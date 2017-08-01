@@ -66,4 +66,13 @@
 
     }
     
+    .avatar-container {
+        height: 100px;
+        width: 100px;
+
+        border-radius: 3px;
+
+        background-size: cover;
+        background-position: center center;
+    }
  </style>
