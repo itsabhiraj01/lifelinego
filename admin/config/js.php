@@ -15,7 +15,7 @@
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 
 <!-- jQueryUI -->
-<script src="//code.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -49,13 +49,22 @@
 
                 $.get("ajax/pages.php?id="+pageid);
 
-                $("#page_"+pageid).remove();
+                $("#page_"+pageid).remove(); //removes page from database
                 //alert(selected);
 
             }
         });
 
-    });
+        $( "#sort-nav" ).sortable({
+            cursor: "move",
+            update: function() {
+                var order = $(this).sortable("serialize"); //storing order of li in array
+                $.get("ajax/list-sort.php", order); //sending order array to lis-sort file
+            }
+        });
+        $( "#sort-nav" ).disableSelection();
+
+    }); // END document.ready();
 
 tinymce.init( {
     selector: ".editor",

@@ -22,7 +22,7 @@ include('functions/sandbox.php');
 $debug = data_settings_value($dbc, 'debug-status');
 
 
-$site_title = "LifeLineGo 1.0";
+$site_title = "LifeLineGo";
 
 
 
