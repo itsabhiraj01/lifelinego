@@ -36,7 +36,7 @@ if(!isset($path['call_parts'][0]) || $path['call_parts'][0] == '') {
 
 
 #page setup here
-$page = data_page($dbc, $path['call_parts'][0]);
+$page = data_post($dbc, $path['call_parts'][0]);
 
 
 

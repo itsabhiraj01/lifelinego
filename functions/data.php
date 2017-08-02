@@ -15,7 +15,7 @@ function data_settings_value($dbc, $id) {
 
 
 
-function data_page($dbc, $id) {
+function data_post($dbc, $id) {
 
   if(is_numeric($id)) {
     $cond = "WHERE id = $id";
@@ -23,7 +23,7 @@ function data_page($dbc, $id) {
     $cond  = "WHERE slug = '$id'";
   }
 
-  $q = "SELECT * FROM pages $cond";
+  $q = "SELECT * FROM posts $cond";
   $r = mysqli_query($dbc, $q); //run query
 
   $data = mysqli_fetch_assoc($r); //store query result in array
