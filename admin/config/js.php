@@ -67,13 +67,21 @@
         $(".nav-form").submit(function (event) {
 
             var navData = $(this).serializeArray();
+            var navLabel = $('input['name=label']').val();
+            var navId = $('input['name=id']').val();
 
             $.ajax({
 
                 url: "ajax/navigation.php",
                 type: "POST",
                 data: navData
+
+            }).done(function() {
+
+                $("#label_"+navId).html(navLabel);
+
             });
+
 
             event.preventDefault();
 
