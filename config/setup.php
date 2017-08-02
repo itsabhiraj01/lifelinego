@@ -10,6 +10,7 @@ include('config/connection.php');
 
 # Constants :
 DEFINE('D_TEMPLATE', 'template'); //template folder
+DEFINE('D_VIEW', 'views'); //views folder
 
 
 # Functions :
