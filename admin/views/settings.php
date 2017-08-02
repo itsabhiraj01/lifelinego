@@ -18,21 +18,21 @@
 		            
 		            <!-- class="sr-only" -->
 		            <label  for="id">ID</label>
-		            <input class="form-control" type="text" name="id" id="id" value="<?php echo $opened['id']; ?>" placeholder="Id-name" autocomplete="off">
+		            <input class="form-control" data-id="<?php echo $opened['id'];?>" data-label="Setting ID" data-db="settings-id" type="text" name="id" id="id" value="<?php echo $opened['id']; ?>" placeholder="Id-name" autocomplete="off" disabled>
 
 		        </div>
 
 		         <div class="form-group">
 		            
 		            <label for="label">Label</label>
-		            <input class="form-control" type="text" name="label" id="label" value="<?php echo $opened['label']; ?>" placeholder="Label" autocomplete="off">
+		            <input class="form-control blur-save" data-id="<?php echo $opened['id'];?>" data-label="Setting Label" data-db="settings-label" type="text" name="label" id="label" value="<?php echo $opened['label']; ?>" placeholder="Label" autocomplete="off">
 
 		        </div>
 
 		         <div class="form-group">
 		            
 		            <label for="value">Value</label>
-		            <input class="form-control" type="text" name="value" id="value" value="<?php echo $opened['value']; ?>" placeholder="Value" autocomplete="off">
+		            <input class="form-control blur-save" data-id="<?php echo $opened['id'];?>" data-label="Setting Value" data-db="settings-value" type="text" name="value" id="value" value="<?php echo $opened['value']; ?>" placeholder="Value" autocomplete="off">
 
 		        </div>
 

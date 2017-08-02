@@ -26,6 +26,9 @@
 <!-- Dorpzone.js -->
 <script src="js/dropzone.js"></script>
 
+<!-- SaveOnBlur.js -->
+<script src="js/SaveOnBlur.js"></script>
+
 <script>
 	
     $(document).ready(function() {

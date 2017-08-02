@@ -22,6 +22,9 @@
 <!-- Dropzone CSS -->
 <link rel="stylesheet" href="css/dropzone.css">
 
+<!-- SaveOnBlur CSS -->
+<link rel="stylesheet" href="css/SaveOnBlur.css">
+
 <!-- Font awesome -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 

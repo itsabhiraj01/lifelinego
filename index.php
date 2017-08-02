@@ -2,4 +2,4 @@
 
 <?php include('views/'.$view['name'].'.php'); //Page view ?>
 
-<?php include('template/footer.php'); //footer ?>
+<?php include('template/footer.php'); //footer ?> 
