@@ -14,8 +14,10 @@
 
         	while ($list = mysqli_fetch_assoc($r)) { ?>
 
-    		    <li id="list_<?php echo $list['id']; ?>" class="list-group-item"><?php echo $list['label']; ?>
-    		    	<button type="button" class="btn btn-default" data-toggle="collapse" data-target="#form_<?php echo $list['id']; ?>"></button>
+    		    <li id="list_<?php echo $list['id']; ?>" class="list-group-item">
+    		    	<a data-toggle="collapse" data-target="#form_<?php echo $list['id']; ?>">
+    		        	<?php echo $list['label']; ?> <i class="fa fa-chevron-down"></i>
+    		    	</a>
     		    	<div id="form_<?php echo $list['id']; ?>" class="collapse">The collpase form data</div>
     		    </li>
 
