@@ -64,6 +64,21 @@
         });
         $( "#sort-nav" ).disableSelection();
 
+        $(".nav-form").submit(function (event) {
+
+            var navData = $(this).serializeArray();
+
+            $.ajax({
+
+                url: "ajax/navigation.php",
+                type: "POST",
+                data: navData
+            });
+
+            event.preventDefault();
+
+        });
+
     }); // END document.ready();
 
 tinymce.init( {
