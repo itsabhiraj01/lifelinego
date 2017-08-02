@@ -13,7 +13,16 @@ function data_settings_value($dbc, $id) {
 
 }
 
+function data_post_type($dbc, $id) {
 
+  $q = "SELECT * FROM post_types WHERE id=$id";
+  $r = mysqli_query($dbc, $q); //run query
+
+  $data = mysqli_fetch_assoc($r);
+
+  return $data; 
+
+}
 
 function data_post($dbc, $id) {
 
