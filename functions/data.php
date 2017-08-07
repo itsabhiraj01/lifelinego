@@ -49,8 +49,6 @@ function data_post($dbc, $id) {
 
   }
 
- 
-
   return $data;
 }
 

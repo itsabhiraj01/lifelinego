@@ -26,6 +26,12 @@
 <?php print_r($_POST); ?>
     </pre>
 
+<h1>Session</h1>
+
+    <pre>
+<?php print_r($_SESSION); ?>
+    </pre>
+
 <h1>Page Array</h1>
 
 	<pre>

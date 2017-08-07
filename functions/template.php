@@ -7,11 +7,20 @@ function nav_main($dbc, $path) {
 
     while ($nav = mysqli_fetch_assoc($r)) { 
 
-        	$nav['slug'] = get_slug($dbc, $nav['url']);
+        $user_login = '';
 
+        	if (isset($_SESSION['username'])) {
+        		if(strcasecmp($nav['label'], 'Login') == 0) {
+        		$nav['label'] = 'Logout';
+        		}
+        		if(strcasecmp($nav['label'], 'Logout') == 0) {
+        			$nav['url'] = 'logout';
+        		}
+
+        	}
     	?> 
 
-    <li<?php selected($path['call_parts'][0], $nav['slug'], ' class="active"'); ?>><a href="<?php echo $nav['url']; ?>"><?php echo $nav['label']; ?></a></li>
+    <li<?php selected($path['call_parts'][0], $nav['url'], ' class="active"'); ?>><a href="<?php echo $nav['url']; ?>"><?php echo $nav['label']; ?></a></li>
 
 
 	<?php }
